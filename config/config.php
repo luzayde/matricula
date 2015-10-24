@@ -7,7 +7,7 @@ config::setRowGrid(10);
 
 config::setDbHost('localhost');
 config::setDbDriver('pgsql'); // mysql
-config::setDbName('soho_framework');
+config::setDbName('matricula');
 config::setDbPort(5432); // 3306
 config::setDbUser('postgres');
 config::setDbPassword(null);
