@@ -10,7 +10,7 @@ config::setDbDriver('pgsql'); // mysql
 config::setDbName('soho_framework');
 config::setDbPort(5432); // 3306
 config::setDbUser('postgres');
-config::setDbPassword('sqlx32');
+config::setDbPassword(null);
 // Esto solo es necesario en caso de necesitar un socket para la DB
 config::setDbUnixSocket(null); ///tmp/mysql.sock
 
