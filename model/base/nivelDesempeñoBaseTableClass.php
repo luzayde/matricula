@@ -4,6 +4,12 @@ use mvc\model\table\tableBaseClass;
 
 class nivelDesempeñoBaseTableClass extends tableBaseClass {
 
+  const ID_NIVEL_DESEPENO = "id";
+  const NOMBRE = "nombre";
+  const INTENSIDAD_HORARIA = "intensidad_horaria";
+  const COD_TIPO_ASIGNATURA = "cod_tipo_asignatura";
+  const DELETED_AT = "deleted_at";
+
   /**
    * Método para obtener el nombre del campo más la tabla ya sea en formato
    * DB (.) o en formato HTML (_)

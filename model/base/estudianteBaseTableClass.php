@@ -4,6 +4,25 @@ use mvc\model\table\tableBaseClass;
 
 class estudianteBaseTableClass extends tableBaseClass {
 
+  const ID_ESTUDIANTE = "id";
+  const CIUDAD_ID = "ciudad_id";
+  const ID_ACUDIENTE_PADRE = "acudiente_id_padre";
+  const ID_ACUDIENTE_MADRE = "acudiente_id_madre";
+  const TIPO_ID = "tipo_id_id";
+  const TIPO_RH = "tipo_rh_id";
+  const TIPO_DISCAPACIDAD = "tipo_discapacidad_id";
+  const NUM_ID_ESTUDIANTE = "num_id_estudiante";
+  const NOMBRE = "nombre";
+  const APELLIDO = "apellido";
+  const NACIMIENTO = "fecha_nacimiento";
+  const TELEFONO = "telefono";
+  const DIRECCION = "direcccion";
+  const EPS = "eps";
+  const FOTO = "foto";
+  const CORREO = "correo";
+  const ESTADO = "estado";
+  const DELETED_AT = "deleted_at";
+
   /**
    * Método para obtener el nombre del campo más la tabla ya sea en formato
    * DB (.) o en formato HTML (_)

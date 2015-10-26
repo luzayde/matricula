@@ -1,8 +1,15 @@
 <?php
-use mvc\model\table\tableBaseClass;
-class tipoIdBaseTableClass extends \mvc\model\table\tableBaseClass{
 
-   /**
+use mvc\model\table\tableBaseClass;
+
+class tipoIdBaseTableClass extends tableBaseClass {
+
+  const ID_TIPO = "id";
+  const COD_TIPO_ID = "cod_tipo_id";
+  const DESCRIPCION = "nom_tipo_id";
+  const DELETED_AT = "deleted_at";
+
+  /**
    * Método para obtener el nombre del campo más la tabla ya sea en formato
    * DB (.) o en formato HTML (_)
    *
@@ -83,4 +90,5 @@ class tipoIdBaseTableClass extends \mvc\model\table\tableBaseClass{
   public static function update($ids, $data, $table = null) {
     return parent::update($ids, $data, self::getNameTable());
   }
+
 }

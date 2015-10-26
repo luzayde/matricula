@@ -4,6 +4,12 @@ use mvc\model\table\tableBaseClass;
 
 class ciudadBaseTableClass extends tableBaseClass {
 
+  const ID_CIUDAD = "id";
+  const BARRIO_ID = "barrio_id";
+  const COD_CIUDAD = "cod_ciudad";
+  const NOMBRE_CIUDAD = "nombre_ciudad";
+  const DELETED_AT = "deleted_at";
+
   /**
    * Método para obtener el nombre del campo más la tabla ya sea en formato
    * DB (.) o en formato HTML (_)

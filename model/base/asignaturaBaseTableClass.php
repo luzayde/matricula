@@ -4,6 +4,13 @@ use mvc\model\table\tableBaseClass;
 
 class asignaturaBaseTableClass extends tableBaseClass {
 
+  const ID_ASIGNATURA = "id";
+  const NOMBRE = "nombre";
+  const INTESIDAD_HORARIA = "intesidad_horaria";
+  const COD_TIPO_ASIGNATURA = "cod_tipo_asignatura";
+  const DELETED_AT = "delete_at";
+  const TIPO_ASIGNATURDA = "tipo_asignatura_Id";
+
   /**
    * Método para obtener el nombre del campo más la tabla ya sea en formato
    * DB (.) o en formato HTML (_)

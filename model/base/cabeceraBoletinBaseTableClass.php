@@ -2,7 +2,19 @@
 
 use mvc\config\myConfigClass as config;
 
-class cabeceraBoletinBaseTableClass extends \mvc\model\table\tableBaseClass {
+class cabeceraBoletinBaseTableClass extends tableBaseClass {
+
+  const ID_CABECERA_BOLETIN = "id";
+  const BOLETIN_ID = "boletin_id";
+  const FECHA_BOLETIN = "fecha_boletin";
+  const ID_ESTUDIANTE = "id_estudiante";
+  const GRADO = "grado";
+  const ANO_LECTIVO = "año_electivo";
+  const PERIODO_ACADEMICO = "periodo_academico";
+  const PROMEDIO = "promedio";
+  const OBSERVACIONES = "observaciones";
+  const DELETED_AT = "delete_at";
+  const DETALLE_BOLETIN_ID = "detalle_boletin_id";
 
   /**
    * Método para obtener el nombre del campo más la tabla ya sea en formato

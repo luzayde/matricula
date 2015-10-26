@@ -4,6 +4,14 @@ use mvc\model\table\tableBaseClass;
 
 class directorGrupoBaseTableClass extends tableBaseClass {
 
+  const ID_DIRECTOR_GRUPO = "id";
+  const NOMBRE = "nombre";
+  const APELLIDO = "apellido";
+  const TELEFONO = "telefono";
+  const DIRECCION = "direccion";
+  const EMAIL = "email";
+  const DELETED_AT = "deleted_at";
+  
   /**
    * Método para obtener el nombre del campo más la tabla ya sea en formato
    * DB (.) o en formato HTML (_)

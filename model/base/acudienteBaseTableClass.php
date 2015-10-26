@@ -4,6 +4,19 @@ use mvc\model\table\tableBaseClass;
 
 class acudienteBaseTableClass extends tableBaseClass {
 
+  const ID_ACUDIENTE = "id";
+  const TIPO_ACUDIENTE = "tipo_acudiente_id";
+  const COD_ACUDIENTE = "cod_acudiente";
+  const NOMBRE = "nombre";
+  const APELLIDO = "apellido";
+  const DIRECCION = "direccion";
+  const TELEFONO = "telefono";
+  const OCUPACION = "ocupacion";
+  const TELEFONO_OFICINA = "telefono_oficina";
+  const EMAIL = "email";
+  const ESTADO = "estado";
+  const DELETED_AD = "deleted_at";
+
   /**
    * Método para obtener el nombre del campo más la tabla ya sea en formato
    * DB (.) o en formato HTML (_)

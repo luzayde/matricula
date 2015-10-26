@@ -4,6 +4,15 @@ use mvc\model\table\tableBaseClass;
 
 class detalleBoletinBaseTableClass extends tableBaseClass {
 
+  const ID_DETALLE_BOLETIN = "id";
+  const ITEM = "item";
+  const BOLETIN_ID = "boletiin_id";
+  const COD_MATRICULA = "cod_matricula";
+  const NOTA = "nota";
+  const DESEMPENO = "desempeño";
+  const PERIODO_ACADEMICO = "perido_academico";
+  const DELETED_AT = "deleted_at";
+
   /**
    * Método para obtener el nombre del campo más la tabla ya sea en formato
    * DB (.) o en formato HTML (_)
