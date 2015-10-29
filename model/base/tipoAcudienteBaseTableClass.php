@@ -7,6 +7,7 @@ class tipoAcudienteBaseTableClass extends tableBaseClass {
   const ID_TIPO_ACUDIENTE = "id";
   const COD_TIPO_ACUDIENTE = "cod_tipo_acudiente";
   const DELETED_AT = "deleted_at";
+  const DESCRIPCION = "descripcion";
 
   /**
    * Método para obtener el nombre del campo más la tabla ya sea en formato

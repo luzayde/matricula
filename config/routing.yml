@@ -104,3 +104,41 @@ default_deleteSelect:
 #  load:
 #    - libs/fpdf/fpdf.php
 ##-------------------------- EJEMPLO --------------------------##
+
+
+
+##-------------------------- ACUDIENTE --------------------------##
+
+acudiente_index:
+  url:    /acudiente/index
+  param:  { module: acudiente, action: index, format: html }
+  load:
+    - model/base/acudienteBaseTableClass.php
+    - model/acudienteTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    
+default_insert:
+  url:    /usuarios/insertar
+  param:  { module: default, action: insert, format: html }
+  load:
+    - model/base/acudienteBaseTableClass.php
+    - model/acudienteTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/tipoAcudienteTableClass.php
+    - model/base/tipoAcudienteBaseTableClass.php
+
+default_create:
+  url:    /usuarios/crear
+  param:  { module: default, action: create, format: html }
+  load:
+    - model/base/acudienteBaseTableClass.php
+    - model/acudienteTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/tipoAcudienteTableClass.php
+    - model/base/tipoAcudienteBaseTableClass.php
