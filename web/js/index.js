@@ -1,8 +1,6 @@
 function paginador(objeto, url) {
-  var first = url.indexOf("?");
-  window.location.href = url + ((first === -1) ? '?' : '&') + 'page=' + $(objeto).val();
+  window.location.href = url + '?page=' + objeto;
 }
-
 function confirmarEliminar(id) {
   var rsp = confirm("¿Esta seguro de querer eliminar el registro indicado?");
   if (rsp == true) {
@@ -18,7 +16,7 @@ function borrarSeleccion() {
   }
 }
 
-function eliminarMasivo(){
+function eliminarMasivo() {
   $('#myModalDeleteMasivo').modal('toggle');
 }
 

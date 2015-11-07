@@ -294,6 +294,47 @@ namespace mvc\model\table {
       }
     }
 
+    public static function count($table, $fields, $deletedLogical = true, $lines = null, $where = null) {
+      try {
+        $sql = 'SELECT ';
+        $sql = $sql . 'COUNT' . '(' . $table . '.' . $fields[0] . ') as cantidad' . ' ' . ')';
+        $newLeng = strlen($sql) - 2;
+        $sql = substr($sql, 0, $newLeng);
+        $sql = $sql . ' FROM ' . $table;
+        $flag = false;
+        if ($deletedLogical === true) {
+          $sql = $sql . ' WHERE ' . $table . '.' . self::$fieldDeleteAt . ' IS NULL';
+          $flag = true;
+        }
+        if ($deletedLogical === false and is_array($where) === true) {
+          $flag = false;
+        }
+        if ($where !== null) {
+          foreach ($where as $field => $value) {
+            if (is_array($value)) {
+              if ($flag === false) {
+                $sql = $sql . ' WHERE ' . $field . ' BETWEEN ' . ((is_numeric($value[0])) ? $value[0] : "'$value[0]'") . ' AND ' . ((is_numeric($value[1])) ? $value[1] : "'$value[1]'") . ' ';
+                $flag = true;
+              } else {
+                $sql = $sql . ' AND ' . $field . ' BETWEEN ' . ((is_numeric($value[0])) ? $value[0] : "'$value[0]'") . ' AND ' . ((is_numeric($value[1])) ? $value[1] : "'$value[1]'") . ' ';
+              }
+            } else {
+              if ($flag === false) {
+                $sql = $sql . ' WHERE ' . $field . ' = ' . ((is_numeric($value)) ? $value : "'$value'") . ' ';
+                $flag = true;
+              } else {
+                $sql = $sql . ' AND ' . $field . ' = ' . ((is_numeric($value)) ? $value : "'$value'") . ' ';
+              }
+            }
+          }
+        }
+        $count = model::getInstance()->query($sql)->fetchAll(\PDO::FETCH_OBJ);
+        return ceil($count[0]->cantidad / $lines);
+      } catch (\PDOException $exc) {
+        throw $exc;
+      }
+    }
+
   }
 
 }

@@ -8,6 +8,7 @@ all:
     - jquery-1.11.3.min.js
     - bootstrap.js
     - main.js
+    - index.js
   stylesheet:
     - bootstrap.css
     - main.css
@@ -19,7 +20,3 @@ shfSecurity:
     stylesheet:
       - signin.css
 
-default:
-  index:
-    javascript:
-      - index.js

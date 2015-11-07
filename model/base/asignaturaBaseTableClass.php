@@ -8,8 +8,8 @@ class asignaturaBaseTableClass extends tableBaseClass {
   const NOMBRE = "nombre";
   const INTESIDAD_HORARIA = "intesidad_horaria";
   const COD_TIPO_ASIGNATURA = "cod_tipo_asignatura";
-  const DELETED_AT = "delete_at";
-  const TIPO_ASIGNATURDA = "tipo_asignatura_Id";
+  const DELETED_AT = "deleted_at";
+  const TIPO_ASIGNATURDA = "tipo_asignatura_id";
 
   /**
    * Método para obtener el nombre del campo más la tabla ya sea en formato
@@ -91,6 +91,10 @@ class asignaturaBaseTableClass extends tableBaseClass {
    */
   public static function update($ids, $data, $table = null) {
     return parent::update($ids, $data, self::getNameTable());
+  }
+
+  public static function count($fields, $deletedLogical = true, $lines = null, $where = null, $table = null) {
+    return parent::count(self::getNameTable(), $fields, $deletedLogical, $lines, $where);
   }
 
 }

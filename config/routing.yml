@@ -119,9 +119,9 @@ acudiente_index:
     - model/base/bitacoraBaseTableClass.php
     - model/bitacoraTableClass.php
     
-default_insert:
-  url:    /usuarios/insertar
-  param:  { module: default, action: insert, format: html }
+acudiente_insert:
+  url:    /acudiente/insertar
+  param:  { module: acudiente, action: insert, format: html }
   load:
     - model/base/acudienteBaseTableClass.php
     - model/acudienteTableClass.php
@@ -131,14 +131,238 @@ default_insert:
     - model/tipoAcudienteTableClass.php
     - model/base/tipoAcudienteBaseTableClass.php
 
-default_create:
-  url:    /usuarios/crear
-  param:  { module: default, action: create, format: html }
+acudiente_create:
+  url:    /acudiente/crear
+  param:  { module: acudiente, action: create, format: html }
   load:
     - model/base/acudienteBaseTableClass.php
     - model/acudienteTableClass.php
     - hooks/logHookClass.php
     - model/base/bitacoraBaseTableClass.php
     - model/bitacoraTableClass.php
-    - model/tipoAcudienteTableClass.php
     - model/base/tipoAcudienteBaseTableClass.php
+    - model/tipoAcudienteTableClass.php
+    
+    
+##-------------------------- ASIGNATURA --------------------------##
+
+asignatura_index:
+  url:    /asignatura/index
+  param:  { module: asignatura, action: index, format: html }
+  load:
+    - model/base/asignaturaBaseTableClass.php
+    - model/asignaturaTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/tipoAsignaturaBaseTableClass.php
+    - model/tipoAsignaturaTableClass.php
+  
+    
+asignatura_insert:
+  url:    /asignatura/insertar
+  param:  { module: asignatura, action: insert, format: html }
+  load:
+    - model/base/asignaturaBaseTableClass.php
+    - model/asignaturaTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/tipoAsignaturaBaseTableClass.php
+    - model/tipoAsignaturaTableClass.php
+
+asignatura_create:
+  url:    /asignatura/crear
+  param:  { module: asignatura, action: create, format: html }
+  load:
+    - model/base/asignaturaBaseTableClass.php
+    - model/asignaturaTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/tipoAsignaturaBaseTableClass.php
+    - model/tipoAsignaturaTableClass.php
+    
+asignatura_edit:
+  url:    /asignatura/editar
+  param:  { module: asignatura, action: edit, format: html }
+  load:
+    - model/base/asignaturaBaseTableClass.php
+    - model/asignaturaTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/tipoAsignaturaBaseTableClass.php
+    - model/tipoAsignaturaTableClass.php
+
+asignatura_update:
+  url:    /asignatura/actualizar
+  param:  { module: asignatura, action: update, format: html }
+  load:
+    - model/base/asignaturaBaseTableClass.php
+    - model/asignaturaTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/tipoAsignaturaBaseTableClass.php
+    - model/tipoAsignaturaTableClass.php
+    
+asignatura_delete:
+  url:    /asignatura/eliminar
+  param:  { module: asignatura, action: delete, format: json }
+  load:
+    - model/base/asignaturaBaseTableClass.php
+    - model/asignaturaTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/tipoAsignaturaBaseTableClass.php
+    - model/tipoAsignaturaTableClass.php
+
+asignatura_deleteSelect:
+  url:    /asignatura/eliminarSeleccion
+  param:  { module: asignatura, action: deleteSelect, format: html }
+  load:
+    - model/base/asignaturaBaseTableClass.php
+    - model/asignaturaTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/tipoAsignaturaBaseTableClass.php
+    - model/tipoAsignaturaTableClass.php
+    
+    
+##-------------------------- BOLETIN --------------------------##
+
+boletin_index:
+  url:    /boletin/index
+  param:  { module: boletin, action: index, format: html }
+  load:
+    - model/base/cabeceraBoletinBaseTableClass.php
+    - model/cabeceraBoletinTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/estudianteBaseTableClass.php
+    - model/estudianteTableClass.php
+    - model/base/gradoBaseTableClass.php
+    - model/gradoTableClass.php
+  
+    
+boletin_insert:
+  url:    /boletin/insertar
+  param:  { module: boletin, action: insert, format: html }
+  load:
+    - model/base/cabeceraBoletinBaseTableClass.php
+    - model/cabeceraBoletinTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/estudianteBaseTableClass.php
+    - model/estudianteTableClass.php
+    - model/base/gradoBaseTableClass.php
+    - model/gradoTableClass.php
+
+boletin_create:
+  url:    /boletin/crear
+  param:  { module: boletin, action: create, format: html }
+  load:
+    - model/base/cabeceraBoletinBaseTableClass.php
+    - model/cabeceraBoletinTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/estudianteBaseTableClass.php
+    - model/estudianteTableClass.php
+    - model/base/gradoBaseTableClass.php
+    - model/gradoTableClass.php
+    
+boletin_edit:
+  url:    /boletin/editar
+  param:  { module: boletin, action: edit, format: html }
+  load:
+    - model/base/cabeceraBoletinBaseTableClass.php
+    - model/cabeceraBoletinTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/estudianteBaseTableClass.php
+    - model/estudianteTableClass.php
+    - model/base/gradoBaseTableClass.php
+    - model/gradoTableClass.php
+
+boletin_update:
+  url:    /boletin/actualizar
+  param:  { module: boletin, action: update, format: html }
+  load:
+    - model/base/cabeceraBoletinBaseTableClass.php
+    - model/cabeceraBoletinTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/estudianteBaseTableClass.php
+    - model/estudianteTableClass.php
+    - model/base/gradoBaseTableClass.php
+    - model/gradoTableClass.php
+    
+boletin_delete:
+  url:    /boletin/eliminar
+  param:  { module: boletin, action: delete, format: json }
+  load:
+    - model/base/cabeceraBoletinBaseTableClass.php
+    - model/cabeceraBoletinTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/estudianteBaseTableClass.php
+    - model/estudianteTableClass.php
+    - model/base/gradoBaseTableClass.php
+    - model/gradoTableClass.php
+
+boletin_deleteSelect:
+  url:    /boletin/eliminarSeleccion
+  param:  { module: boletin, action: deleteSelect, format: html }
+  load:
+    - model/base/cabeceraBoletinBaseTableClass.php
+    - model/cabeceraBoletinTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/estudianteBaseTableClass.php
+    - model/estudianteTableClass.php
+    - model/base/gradoBaseTableClass.php
+    - model/gradoTableClass.php
+
+boletin_ver:
+  url:    /boletin/ver
+  param:  { module: boletin, action: ver, format: html }
+  load:
+    - model/base/cabeceraBoletinBaseTableClass.php
+    - model/cabeceraBoletinTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/estudianteBaseTableClass.php
+    - model/estudianteTableClass.php
+    - model/base/gradoBaseTableClass.php
+    - model/gradoTableClass.php
+    - model/base/detalleBoletinBaseTableClass.php
+    - model/detalleBoletinTableClass.php

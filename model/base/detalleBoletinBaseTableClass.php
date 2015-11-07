@@ -9,8 +9,7 @@ class detalleBoletinBaseTableClass extends tableBaseClass {
   const BOLETIN_ID = "boletiin_id";
   const COD_MATRICULA = "cod_matricula";
   const NOTA = "nota";
-  const DESEMPENO = "desempeño";
-  const PERIODO_ACADEMICO = "perido_academico";
+  const DESEMPENO = "desempeno";
   const DELETED_AT = "deleted_at";
 
   /**

@@ -1,6 +1,7 @@
 <?php
 
 use mvc\config\myConfigClass as config;
+use mvc\model\table\tableBaseClass as tableBaseClass;
 
 class cabeceraBoletinBaseTableClass extends tableBaseClass {
 
@@ -9,7 +10,7 @@ class cabeceraBoletinBaseTableClass extends tableBaseClass {
   const FECHA_BOLETIN = "fecha_boletin";
   const ID_ESTUDIANTE = "id_estudiante";
   const GRADO = "grado";
-  const ANO_LECTIVO = "año_electivo";
+  const ANO_LECTIVO = "ano_electivo";
   const PERIODO_ACADEMICO = "periodo_academico";
   const PROMEDIO = "promedio";
   const OBSERVACIONES = "observaciones";

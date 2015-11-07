@@ -8,7 +8,6 @@ class gradoBaseTableClass extends tableBaseClass {
   const GRADO = "grado";
   const ANO_LECTIVO = "año_electivo";
   const JORNADA = "jornada";
-  const ID_DIRECTOR = "id_director";
   const ID_DIRECTOR_GRUṔO = "director_grupo_id";
   const DELETED_AT = "delete_at";
 

@@ -27,7 +27,7 @@ class tipoAcudienteBaseTableClass extends tableBaseClass {
    * @return string
    */
   public static function getNameTable() {
-    return 'tipo_acudiente';
+    return 'tipo_documento';
   }
 
   /**
