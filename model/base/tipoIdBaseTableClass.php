@@ -5,7 +5,6 @@ use mvc\model\table\tableBaseClass;
 class tipoIdBaseTableClass extends tableBaseClass {
 
   const ID_TIPO = "id";
-  const COD_TIPO_ID = "cod_tipo_id";
   const DESCRIPCION = "nom_tipo_id";
   const DELETED_AT = "deleted_at";
 

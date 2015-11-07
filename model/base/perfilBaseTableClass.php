@@ -5,7 +5,6 @@ use mvc\model\table\tableBaseClass;
 class perfilBaseTableClass extends tableBaseClass {
 
   const ID_PERFIL = "id";
-  const COD_PERFIL = "cod_perfil";
   const DESCRPCION = "des_perfil";
   const DELETED_AT = "deleted_at";
 

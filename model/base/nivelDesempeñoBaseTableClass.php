@@ -7,7 +7,6 @@ class nivelDesempeñoBaseTableClass extends tableBaseClass {
   const ID_NIVEL_DESEPENO = "id";
   const NOMBRE = "nombre";
   const INTENSIDAD_HORARIA = "intensidad_horaria";
-  const COD_TIPO_ASIGNATURA = "cod_tipo_asignatura";
   const DELETED_AT = "deleted_at";
 
   /**

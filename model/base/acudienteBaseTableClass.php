@@ -6,7 +6,6 @@ class acudienteBaseTableClass extends tableBaseClass {
 
   const ID_ACUDIENTE = "id";
   const TIPO_ACUDIENTE = "tipo_acudiente_id";
-  const COD_ACUDIENTE = "cod_acudiente";
   const NOMBRE = "nombre";
   const APELLIDO = "apellido";
   const DIRECCION = "direccion";

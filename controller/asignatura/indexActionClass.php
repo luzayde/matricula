@@ -23,7 +23,6 @@ class indexActionClass extends controllerClass implements controllerActionInterf
       $where = null;
       
       $fields = array(
-          asignaturaTableClass::COD_TIPO_ASIGNATURA,
           asignaturaTableClass::ID_ASIGNATURA,
           asignaturaTableClass::INTESIDAD_HORARIA,
           asignaturaTableClass::NOMBRE,

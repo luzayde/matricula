@@ -22,7 +22,6 @@ class indexActionClass extends controllerClass implements controllerActionInterf
 
       $fields = array(
       cabeceraBoletinTableClass::ANO_LECTIVO,
-      cabeceraBoletinTableClass::BOLETIN_ID,
       cabeceraBoletinTableClass::FECHA_BOLETIN,
       cabeceraBoletinTableClass::GRADO,
       cabeceraBoletinTableClass::ID_CABECERA_BOLETIN,

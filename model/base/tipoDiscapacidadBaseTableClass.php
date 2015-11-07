@@ -5,7 +5,6 @@ use mvc\model\table\tableBaseClass;
 class tipoDiscapacidadBaseTableClass extends tableBaseClass {
 
   const ID_TIPO_DISCAPACIDAD = "id";
-  const CODIGO_DISCAPACIDAD = "cod_discapacidad";
   const DESCRIPCION = "desc_discapacidad";
 
   /**

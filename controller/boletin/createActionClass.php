@@ -42,8 +42,7 @@ class createActionClass extends controllerClass implements controllerActionInter
           cabeceraBoletinTableClass::ANO_LECTIVO => $anoLectivo,
           cabeceraBoletinTableClass::PERIODO_ACADEMICO => $periodo,
           cabeceraBoletinTableClass::OBSERVACIONES => $observaciones,
-          cabeceraBoletinTableClass::PROMEDIO => $promedio,
-          cabeceraBoletinTableClass::BOLETIN_ID => 1//provisional
+          cabeceraBoletinTableClass::PROMEDIO => $promedio
       );
       cabeceraBoletinTableClass::insert($data);
       session::getInstance()->setSuccess("Se ha insertado con exito el registro");

@@ -29,7 +29,6 @@ class updateActionClass extends controllerClass implements controllerActionInter
         );
 
         $data = array(
-            asignaturaTableClass::COD_TIPO_ASIGNATURA => $tipoAsignatura, //provisional
             asignaturaTableClass::INTESIDAD_HORARIA => $intesidadHoraria,
             asignaturaTableClass::NOMBRE => $nombre,
             asignaturaTableClass::TIPO_ASIGNATURDA => $tipoAsignatura

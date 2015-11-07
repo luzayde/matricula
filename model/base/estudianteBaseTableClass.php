@@ -11,7 +11,6 @@ class estudianteBaseTableClass extends tableBaseClass {
   const TIPO_ID = "tipo_id_id";
   const TIPO_RH = "tipo_rh_id";
   const TIPO_DISCAPACIDAD = "tipo_discapacidad_id";
-  const NUM_ID_ESTUDIANTE = "num_id_estudiante";
   const NOMBRE = "nombre";
   const APELLIDO = "apellido";
   const NACIMIENTO = "fecha_nacimiento";

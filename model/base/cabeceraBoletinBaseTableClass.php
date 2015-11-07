@@ -6,7 +6,6 @@ use mvc\model\table\tableBaseClass as tableBaseClass;
 class cabeceraBoletinBaseTableClass extends tableBaseClass {
 
   const ID_CABECERA_BOLETIN = "id";
-  const BOLETIN_ID = "boletin_id";
   const FECHA_BOLETIN = "fecha_boletin";
   const ID_ESTUDIANTE = "id_estudiante";
   const GRADO = "grado";

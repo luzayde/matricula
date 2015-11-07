@@ -21,7 +21,6 @@ class verActionClass extends controllerClass implements controllerActionInterfac
 
         $fieldsBoletin = array(
             cabeceraBoletinTableClass::ANO_LECTIVO,
-            cabeceraBoletinTableClass::BOLETIN_ID,
             cabeceraBoletinTableClass::FECHA_BOLETIN,
             cabeceraBoletinTableClass::GRADO,
             cabeceraBoletinTableClass::ID_CABECERA_BOLETIN,
@@ -36,7 +35,6 @@ class verActionClass extends controllerClass implements controllerActionInterfac
         );
 
         $fields = array(
-            detalleBoletinTableClass::BOLETIN_ID,
             detalleBoletinTableClass::COD_MATRICULA,
             detalleBoletinTableClass::DESEMPENO,
             detalleBoletinTableClass::ID_DETALLE_BOLETIN,
@@ -47,7 +45,7 @@ class verActionClass extends controllerClass implements controllerActionInterfac
             detalleBoletinTableClass::ID_DETALLE_BOLETIN
         );
         $where = array(
-            detalleBoletinTableClass::BOLETIN_ID => request::getInstance()->getGet(cabeceraBoletinTableClass::ID_CABECERA_BOLETIN)
+            detalleBoletinTableClass::ID_DETALLE_BOLETIN => request::getInstance()->getGet(cabeceraBoletinTableClass::ID_CABECERA_BOLETIN)
         );
 
         $this->objBoletin = cabeceraBoletinTableClass::getAll($fieldsBoletin, true, null, null, null, null, $whereBoletin);

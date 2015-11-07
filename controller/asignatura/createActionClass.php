@@ -25,7 +25,6 @@ class createActionClass extends controllerClass implements controllerActionInter
       $tipoAsignatura = request::getInstance()->getPost(asignaturaTableClass::getNameField(asignaturaTableClass::TIPO_ASIGNATURDA, true));
 
       $data = array(
-          asignaturaTableClass::COD_TIPO_ASIGNATURA => $tipoAsignatura, //provisional
           asignaturaTableClass::INTESIDAD_HORARIA => $intesidadHoraria,
           asignaturaTableClass::NOMBRE => $nombre,
           asignaturaTableClass::TIPO_ASIGNATURDA => $tipoAsignatura

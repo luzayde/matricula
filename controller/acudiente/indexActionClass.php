@@ -22,7 +22,6 @@ class indexActionClass extends controllerClass implements controllerActionInterf
 
       $fieldsAcudiente = array(
           acudienteTableClass::APELLIDO,
-          acudienteTableClass::COD_ACUDIENTE,
           acudienteTableClass::DIRECCION,
           acudienteTableClass::EMAIL,
           acudienteTableClass::ESTADO,

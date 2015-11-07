@@ -27,7 +27,6 @@ class editActionClass extends controllerClass implements controllerActionInterfa
         $this->objTipoAsignatura = tipoAsignaturaTableClass::getAll($fieldsTipoAsignatura, false);
 
         $fields = array(
-            asignaturaTableClass::COD_TIPO_ASIGNATURA,
             asignaturaTableClass::ID_ASIGNATURA,
             asignaturaTableClass::INTESIDAD_HORARIA,
             asignaturaTableClass::NOMBRE,
