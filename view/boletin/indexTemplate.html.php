@@ -30,7 +30,7 @@ use mvc\view\viewClass as view ?>
         <?php foreach ($objBoletin as $key): ?>
           <tr>
             <td><input type="checkbox" name="chk[]" value="<?php echo $key->id ?>"></td>
-            <td><?php echo $key->boletin_id ?></td>
+            <td><?php echo $key->id ?></td>
             <td><?php echo $key->fecha_boletin ?></td>
             <td><?php echo $key->id_estudiante ?></td>
             <td><?php echo $key->grado ?></td>

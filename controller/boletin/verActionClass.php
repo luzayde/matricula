@@ -19,35 +19,41 @@ class verActionClass extends controllerClass implements controllerActionInterfac
     try {
       if (request::getInstance()->hasRequest(cabeceraBoletinTableClass::ID_CABECERA_BOLETIN)) {
 
+        $fieldsMatricula = array(
+        matriculaTableClass::ID_MATRICULA,
+        matriculaTableClass::OBSERVACIONES
+        );
+        
         $fieldsBoletin = array(
-            cabeceraBoletinTableClass::ANO_LECTIVO,
-            cabeceraBoletinTableClass::FECHA_BOLETIN,
-            cabeceraBoletinTableClass::GRADO,
-            cabeceraBoletinTableClass::ID_CABECERA_BOLETIN,
-            cabeceraBoletinTableClass::ID_ESTUDIANTE,
-            cabeceraBoletinTableClass::OBSERVACIONES,
-            cabeceraBoletinTableClass::PERIODO_ACADEMICO,
-            cabeceraBoletinTableClass::PROMEDIO
+          cabeceraBoletinTableClass::ANO_LECTIVO,
+          cabeceraBoletinTableClass::FECHA_BOLETIN,
+          cabeceraBoletinTableClass::GRADO,
+          cabeceraBoletinTableClass::ID_CABECERA_BOLETIN,
+          cabeceraBoletinTableClass::ID_ESTUDIANTE,
+          cabeceraBoletinTableClass::OBSERVACIONES,
+          cabeceraBoletinTableClass::PERIODO_ACADEMICO,
+          cabeceraBoletinTableClass::PROMEDIO
         );
 
         $whereBoletin = array(
-            cabeceraBoletinTableClass::ID_CABECERA_BOLETIN => request::getInstance()->getGet(cabeceraBoletinTableClass::ID_CABECERA_BOLETIN)
+          cabeceraBoletinTableClass::ID_CABECERA_BOLETIN => request::getInstance()->getGet(cabeceraBoletinTableClass::ID_CABECERA_BOLETIN)
         );
 
         $fields = array(
-            detalleBoletinTableClass::COD_MATRICULA,
-            detalleBoletinTableClass::DESEMPENO,
-            detalleBoletinTableClass::ID_DETALLE_BOLETIN,
-            detalleBoletinTableClass::ITEM,
-            detalleBoletinTableClass::NOTA
+          detalleBoletinTableClass::COD_MATRICULA,
+          detalleBoletinTableClass::DESEMPENO,
+          detalleBoletinTableClass::ID_DETALLE_BOLETIN,
+          detalleBoletinTableClass::ITEM,
+          detalleBoletinTableClass::NOTA
         );
         $orderBy = array(
-            detalleBoletinTableClass::ID_DETALLE_BOLETIN
+          detalleBoletinTableClass::ID_DETALLE_BOLETIN
         );
         $where = array(
-            detalleBoletinTableClass::ID_DETALLE_BOLETIN => request::getInstance()->getGet(cabeceraBoletinTableClass::ID_CABECERA_BOLETIN)
+          detalleBoletinTableClass::BOLETIN_ID => request::getInstance()->getGet(cabeceraBoletinTableClass::ID_CABECERA_BOLETIN)
         );
 
+        $this->objMatricula = matriculaTableClass::getAll($fieldsMatricula, true);
         $this->objBoletin = cabeceraBoletinTableClass::getAll($fieldsBoletin, true, null, null, null, null, $whereBoletin);
         $this->objDetalleBoletin = detalleBoletinTableClass::getAll($fields, true, $orderBy, 'ASC', null, null, $where);
         $this->defineView("ver", "boletin", session::getInstance()->getFormatOutput());

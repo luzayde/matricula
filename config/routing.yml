@@ -332,6 +332,22 @@ boletin_delete:
     - model/estudianteTableClass.php
     - model/base/gradoBaseTableClass.php
     - model/gradoTableClass.php
+    
+boletin_delete_detalle:
+  url:    /boletin/eliminarDetalle
+  param:  { module: boletin, action: deleteDetalle, format: json }
+  load:
+    - model/base/cabeceraBoletinBaseTableClass.php
+    - model/cabeceraBoletinTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/estudianteBaseTableClass.php
+    - model/estudianteTableClass.php
+    - model/base/gradoBaseTableClass.php
+    - model/gradoTableClass.php
 
 boletin_deleteSelect:
   url:    /boletin/eliminarSeleccion
@@ -366,3 +382,25 @@ boletin_ver:
     - model/gradoTableClass.php
     - model/base/detalleBoletinBaseTableClass.php
     - model/detalleBoletinTableClass.php
+    - model/base/matriculaBaseTableClass.php
+    - model/matriculaTableClass.php
+
+boletin_create_detalle:
+  url:    /boletin/createDetalle
+  param:  { module: boletin, action: createDetalle, format: html }
+  load:
+    - model/base/cabeceraBoletinBaseTableClass.php
+    - model/cabeceraBoletinTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/estudianteBaseTableClass.php
+    - model/estudianteTableClass.php
+    - model/base/gradoBaseTableClass.php
+    - model/gradoTableClass.php
+    - model/base/detalleBoletinBaseTableClass.php
+    - model/detalleBoletinTableClass.php
+    - model/base/matriculaBaseTableClass.php
+    - model/matriculaTableClass.php

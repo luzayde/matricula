@@ -19,7 +19,6 @@ class createActionClass extends controllerClass implements controllerActionInter
   public function execute() {
     try {
 
-
       $fecha = request::getInstance()->getPost(cabeceraBoletinTableClass::getNameField
                       (cabeceraBoletinTableClass::FECHA_BOLETIN, true));
       $estudiante = request::getInstance()->getPost(cabeceraBoletinTableClass::getNameField
