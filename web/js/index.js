@@ -47,3 +47,34 @@ $(document).ready(function () {
     });
   });
 });
+
+
+function mostrarFormMadre() {
+  if (document.getElementById('formMadre').style.display === 'block') {
+    document.getElementById('formMadre').style.display = 'none';
+  } else {
+    document.getElementById('formMadre').style.display = 'block';
+  }
+  if (document.getElementById('selecMadre').style.display === 'block') {
+    document.getElementById('selecMadre').style.display = 'none';
+  } else {
+    document.getElementById('selecMadre').style.display = 'block';
+  }
+}
+
+function mostrarFormPadre() {
+  if (document.getElementById('formPadre').style.display === 'block') {
+    document.getElementById('formPadre').style.display = 'none';
+  } else {
+    document.getElementById('formPadre').style.display = 'block';
+  }
+  if (document.getElementById('selectPadre').style.display === 'block') {
+    document.getElementById('selectPadre').style.display = 'none';
+  } else {
+    document.getElementById('selectPadre').style.display = 'block';
+  }
+}
+
+function pagidator(objeto, url){
+  window.location.href = url + '?page='+ $(objeto).val();
+}

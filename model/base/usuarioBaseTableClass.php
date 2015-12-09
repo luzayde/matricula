@@ -29,6 +29,7 @@ class usuarioBaseTableClass extends tableBaseClass {
   const CREATED_AT = 'created_at';
   const UPDATED_AT = 'updated_at';
   const DELETED_AT = 'deleted_at';
+  const CARGO = "cargo_id";
 
   public function getLastLoginAt() {
     return $this->last_login_at;

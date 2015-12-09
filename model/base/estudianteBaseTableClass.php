@@ -15,12 +15,13 @@ class estudianteBaseTableClass extends tableBaseClass {
   const APELLIDO = "apellido";
   const NACIMIENTO = "fecha_nacimiento";
   const TELEFONO = "telefono";
-  const DIRECCION = "direcccion";
+  const DIRECCION = "direccion";
   const EPS = "eps";
-  const FOTO = "foto";
+  const FOTO = "ruta_foto";
   const CORREO = "correo";
   const ESTADO = "estado";
   const DELETED_AT = "deleted_at";
+  const NUMERO_IDENTIFICACION = "numero_identificacion";
 
   /**
    * Método para obtener el nombre del campo más la tabla ya sea en formato

@@ -17,3 +17,8 @@ default:
       - [admin, usuario]
   insert:
     security: true
+home:
+  index:
+    security: true
+    credentials:
+      - [admin, usuario]

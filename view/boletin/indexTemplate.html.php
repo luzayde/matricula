@@ -32,7 +32,13 @@ use mvc\view\viewClass as view ?>
             <td><input type="checkbox" name="chk[]" value="<?php echo $key->id ?>"></td>
             <td><?php echo $key->id ?></td>
             <td><?php echo $key->fecha_boletin ?></td>
-            <td><?php echo $key->id_estudiante ?></td>
+
+  <!--<td><?php // echo $key->id_estudiante  ?></td>-->
+
+
+            <td><?php echo cabeceraBoletinTableClass::retornarNombre($key->id_estudiante) ?></td>
+
+
             <td><?php echo $key->grado ?></td>
             <td><?php echo $key->ano_electivo ?></td>
             <td><?php echo $key->periodo_academico ?></td>
@@ -40,11 +46,13 @@ use mvc\view\viewClass as view ?>
             <td><?php echo $key->observaciones ?></td>
             <td>
               <a href="<?php echo routing::getInstance()->getUrlWeb('boletin', 'ver', array
-                  (cabeceraBoletinTableClass::ID_CABECERA_BOLETIN => $key->id)) ?>" class="btn btn-primary btn-xs">Ver</a>
-                  
+            (cabeceraBoletinTableClass::ID_CABECERA_BOLETIN => $key->id))
+          ?>" class="btn btn-primary btn-xs">Ver</a>
+
               <a href="<?php echo routing::getInstance()->getUrlWeb('boletin', 'edit', array
-                  (cabeceraBoletinTableClass::ID_CABECERA_BOLETIN => $key->id)) ?>" class="btn btn-primary btn-xs">Editar</a>
-                  
+                   (cabeceraBoletinTableClass::ID_CABECERA_BOLETIN => $key->id))
+               ?>" class="btn btn-primary btn-xs">Editar</a>
+
               <a href="#" data-toggle="modal" data-target="#myModalDelete<?php echo $key->id ?>" 
                  class="btn btn-danger btn-xs">Eliminar</a>
 
@@ -62,15 +70,15 @@ use mvc\view\viewClass as view ?>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                       <button type="button" class="btn btn-primary fa fa-eraser" onclick="eliminar(<?php echo $key->id ?>,
-                                '<?php echo cabeceraBoletinTableClass::getNameField(cabeceraBoletinTableClass::ID_CABECERA_BOLETIN, true) ?>',
-                                '<?php echo routing::getInstance()->getUrlWeb('boletin', 'delete') ?>')">Eliminar</button>
+                                  '<?php echo cabeceraBoletinTableClass::getNameField(cabeceraBoletinTableClass::ID_CABECERA_BOLETIN, true) ?>',
+                                  '<?php echo routing::getInstance()->getUrlWeb('boletin', 'delete') ?>')">Eliminar</button>
                     </div>
                   </div>
                 </div>
               </div>
             </td>
           </tr>
-        <?php endforeach ?>
+<?php endforeach ?>
       </tbody>
     </table>
   </form>

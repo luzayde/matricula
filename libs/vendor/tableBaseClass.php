@@ -107,9 +107,11 @@ namespace mvc\model\table {
         $line1 = '(';
         $line2 = 'VALUES (';
         foreach ($data as $field => $value) {
-          if ($field !== '__sequence') {
-            $line1 = ((config::getDbDriver() === 'mysql') ? $line1 . $field . ', ' : $line1 . '"' . $field . '", ' );
-            $line2 = $line2 . ((is_numeric($value) === true) ? $value : "'" . $value . "'") . ', ';
+          if (!empty($field) and ! empty($value)) {
+            if ($field !== '__sequence') {
+              $line1 = ((config::getDbDriver() === 'mysql') ? $line1 . $field . ', ' : $line1 . '"' . $field . '", ' );
+              $line2 = $line2 . ((is_numeric($value) === true) ? $value : "'" . $value . "'") . ', ';
+            }
           }
         }
 

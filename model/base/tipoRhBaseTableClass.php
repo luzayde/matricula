@@ -2,19 +2,11 @@
 
 use mvc\model\table\tableBaseClass;
 
-class acudienteBaseTableClass extends tableBaseClass {
+class tipoRhBaseTableClass extends tableBaseClass {
 
-  const ID_ACUDIENTE = "id";
-  const TIPO_ACUDIENTE = "tipo_acudiente_id";
-  const NOMBRE = "nombre";
-  const APELLIDO = "apellido";
-  const DIRECCION = "direccion";
-  const TELEFONO = "telefono";
-  const OCUPACION = "ocupacion";
-  const TELEFONO_OFICINA = "telefono_oficina";
-  const EMAIL = "email";
-  const ESTADO = "estado";
-  const DELETED_AD = "deleted_at";
+  const ID_TIPO = "id";
+  const DESCRIPCION = "nom_tipo_rh";
+  const DELETED_AT = "deleted_at";
 
   /**
    * Método para obtener el nombre del campo más la tabla ya sea en formato
@@ -34,7 +26,7 @@ class acudienteBaseTableClass extends tableBaseClass {
    * @return string
    */
   public static function getNameTable() {
-    return 'acudiente';
+    return 'tipo_rh';
   }
 
   /**

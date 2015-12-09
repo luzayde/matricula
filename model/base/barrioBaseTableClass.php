@@ -7,6 +7,7 @@ class barrioBaseTableClass extends tableBaseClass {
   const ID_BARRIO = "id";
   const NOMBRE_BARRIO = "nom_barrio";
   const DELETED_AT = "deleted_at";
+  const ID_CIUDAD = 'id_ciudad';
 
   /**
    * Método para obtener el nombre del campo más la tabla ya sea en formato

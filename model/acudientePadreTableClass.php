@@ -3,6 +3,6 @@
 use mvc\model\modelClass as model;
 use mvc\config\myConfigClass as config;
 
-class acudienteTableClass extends acudienteBaseTableClass {
+class acudientePadreTableClass extends acudientePadreBaseTableClass {
   //put your code here
 }

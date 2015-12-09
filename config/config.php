@@ -10,7 +10,7 @@ config::setDbDriver('pgsql'); // mysql
 config::setDbName('matricula_db');
 config::setDbPort(5432); // 3306
 config::setDbUser('postgres');
-config::setDbPassword("sena");
+config::setDbPassword("diaz");
 // Esto solo es necesario en caso de necesitar un socket para la DB
 config::setDbUnixSocket(null); ///tmp/mysql.sock
 
@@ -58,7 +58,7 @@ config::setCookiePath('/' . config::getIndexFile());
 config::setCookieDomain('http://localhost/matricula/web/');
 config::setCookieTime(3600 * 8); // una hora en segundo 3600 y por 8 serían 8 horas
 
-config::setDefaultModule('default');
+config::setDefaultModule('home');
 config::setDefaultAction('index');
 
 config::setDefaultModuleSecurity('shfSecurity');

@@ -1,3 +1,7 @@
+home:
+  url:    /home
+  param:  { module: home, action: index, format: html }
+
 homepage:
   url:    /
   param:  { module: default, action: index, format: html }
@@ -404,3 +408,414 @@ boletin_create_detalle:
     - model/detalleBoletinTableClass.php
     - model/base/matriculaBaseTableClass.php
     - model/matriculaTableClass.php
+    
+    
+    
+    ##-------------------------- ESTUDANTE --------------------------##
+
+estudiante_index:
+  url:    /estudiante/index
+  param:  { module: estudiante, action: index, format: html }
+  load:
+    - model/base/estudianteBaseTableClass.php
+    - model/estudianteTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/ciudadBaseTableClass.php
+    - model/ciudadTableClass.php
+    - model/base/acudienteMadreBaseTableClass.php
+    - model/acudienteMadreTableClass.php
+    - model/base/acudientePadreBaseTableClass.php
+    - model/acudientePadreTableClass.php
+    - model/base/tipoIdBaseTableClass.php
+    - model/tipoIdTableClass.php
+    - model/base/tipoRhBaseTableClass.php
+    - model/tipoRhTableClass.php
+    - model/base/tipoDiscapacidadBaseTableClass.php
+    - model/tipoDiscapacidadTableClass.php
+  
+    
+estudiante_insert:
+  url:    /estudiante/insertar
+  param:  { module: estudiante, action: insert, format: html }
+  load:
+    - model/base/estudianteBaseTableClass.php
+    - model/estudianteTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/ciudadBaseTableClass.php
+    - model/ciudadTableClass.php
+    - model/base/acudienteMadreBaseTableClass.php
+    - model/acudienteMadreTableClass.php
+    - model/base/acudientePadreBaseTableClass.php
+    - model/acudientePadreTableClass.php
+    - model/base/tipoIdBaseTableClass.php
+    - model/tipoIdTableClass.php
+    - model/base/tipoRhBaseTableClass.php
+    - model/tipoRhTableClass.php
+    - model/base/tipoDiscapacidadBaseTableClass.php
+    - model/tipoDiscapacidadTableClass.php
+
+estudiante_create:
+  url:    /estudiante/crear
+  param:  { module: estudiante, action: create, format: html }
+  load:
+    - model/base/estudianteBaseTableClass.php
+    - model/estudianteTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/ciudadBaseTableClass.php
+    - model/ciudadTableClass.php
+    - model/base/acudienteMadreBaseTableClass.php
+    - model/acudienteMadreTableClass.php
+    - model/base/acudientePadreBaseTableClass.php
+    - model/acudientePadreTableClass.php
+    - model/base/tipoIdBaseTableClass.php
+    - model/tipoIdTableClass.php
+    - model/base/tipoRhBaseTableClass.php
+    - model/tipoRhTableClass.php
+    - model/base/tipoDiscapacidadBaseTableClass.php
+    - model/tipoDiscapacidadTableClass.php
+
+estudiante_ver:
+  url:    /estudiante/ver
+  param:  { module: estudiante, action: ver, format: html }
+  load:
+    - model/base/estudianteBaseTableClass.php
+    - model/estudianteTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/ciudadBaseTableClass.php
+    - model/ciudadTableClass.php
+    - model/base/acudienteMadreBaseTableClass.php
+    - model/acudienteMadreTableClass.php
+    - model/base/acudientePadreBaseTableClass.php
+    - model/acudientePadreTableClass.php
+    - model/base/tipoIdBaseTableClass.php
+    - model/tipoIdTableClass.php
+    - model/base/tipoRhBaseTableClass.php
+    - model/tipoRhTableClass.php
+    - model/base/tipoDiscapacidadBaseTableClass.php
+    - model/tipoDiscapacidadTableClass.php
+    
+#estudiante_edit:
+#  url:    /estudiante/editar
+#  param:  { module: estudiante, action: edit, format: html }
+#  load:
+#    - model/base/estudianteBaseTableClass.php
+#    - model/estudianteTableClass.php
+#    - hooks/logHookClass.php
+#    - model/base/bitacoraBaseTableClass.php
+#    - model/bitacoraTableClass.php
+#    - model/base/ciudadBaseTableClass.php
+#    - model/ciudadTableClass.php
+#    - model/base/acudienteBaseTableClass.php
+#    - model/acudienteTableClass.php
+#    - model/base/tipoIdBaseTableClass.php
+#    - model/tipoIdTableClass.php
+#    - model/base/tipoRhBaseTableClass.php
+#    - model/tipoRhTableClass.php
+#    - model/base/tipoDiscapacidadBaseTableClass.php
+#    - model/tipoDiscapacidadTableClass.php
+#
+#estudiante_update:
+#  url:    /estudiante/actualizar
+#  param:  { module: estudiante, action: update, format: html }
+#  load:
+#    - model/base/estudianteBaseTableClass.php
+#    - model/estudianteTableClass.php
+#    - hooks/logHookClass.php
+#    - model/base/bitacoraBaseTableClass.php
+#    - model/bitacoraTableClass.php
+#    - model/base/ciudadBaseTableClass.php
+#    - model/ciudadTableClass.php
+#    - model/base/acudienteBaseTableClass.php
+#    - model/acudienteTableClass.php
+#    - model/base/tipoIdBaseTableClass.php
+#    - model/tipoIdTableClass.php
+#    - model/base/tipoRhBaseTableClass.php
+#    - model/tipoRhTableClass.php
+#    - model/base/tipoDiscapacidadBaseTableClass.php
+#    - model/tipoDiscapacidadTableClass.php
+#    
+#estudiante_delete:
+#  url:    /estudiante/eliminar
+#  param:  { module: estudiante, action: delete, format: json }
+#  load:
+#    - model/base/estudianteBaseTableClass.php
+#    - model/estudianteTableClass.php
+#    - hooks/logHookClass.php
+#    - model/base/bitacoraBaseTableClass.php
+#    - model/bitacoraTableClass.php
+#    - model/base/ciudadBaseTableClass.php
+#    - model/ciudadTableClass.php
+#    - model/base/acudienteBaseTableClass.php
+#    - model/acudienteTableClass.php
+#    - model/base/tipoIdBaseTableClass.php
+#    - model/tipoIdTableClass.php
+#    - model/base/tipoRhBaseTableClass.php
+#    - model/tipoRhTableClass.php
+#    - model/base/tipoDiscapacidadBaseTableClass.php
+#    - model/tipoDiscapacidadTableClass.php
+#
+#estudiante_deleteSelect:
+#  url:    /estudiante/eliminarSeleccion
+#  param:  { module: estudiante, action: deleteSelect, format: html }
+#  load:
+#    - model/base/estudianteBaseTableClass.php
+#    - model/estudianteTableClass.php
+#    - hooks/logHookClass.php
+#    - model/base/bitacoraBaseTableClass.php
+#    - model/bitacoraTableClass.php
+#    - model/base/ciudadBaseTableClass.php
+#    - model/ciudadTableClass.php
+#    - model/base/acudienteBaseTableClass.php
+#    - model/acudienteTableClass.php
+#    - model/base/tipoIdBaseTableClass.php
+#    - model/tipoIdTableClass.php
+#    - model/base/tipoRhBaseTableClass.php
+#    - model/tipoRhTableClass.php
+#    - model/base/tipoDiscapacidadBaseTableClass.php
+#    - model/tipoDiscapacidadTableClass.php
+
+
+
+   ##-------------------------- MATRICULA --------------------------##
+
+matricula_index:
+  url:    /matricula/index
+  param:  { module: matricula, action: index, format: html }
+  load:
+    - model/base/matriculaBaseTableClass.php
+    - model/matriculaTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/ciudadBaseTableClass.php
+    - model/ciudadTableClass.php
+    - model/base/acudienteMadreBaseTableClass.php
+    - model/acudienteMadreTableClass.php
+    - model/base/acudientePadreBaseTableClass.php
+    - model/acudientePadreTableClass.php
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+    
+matricula_insert:
+  url:    /matricula/insertar
+  param:  { module: matricula, action: insert, format: html }
+  load:
+    - model/base/matriculaBaseTableClass.php
+    - model/matriculaTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/ciudadBaseTableClass.php
+    - model/ciudadTableClass.php
+    - model/base/acudienteMadreBaseTableClass.php
+    - model/acudienteMadreTableClass.php
+    - model/base/acudientePadreBaseTableClass.php
+    - model/acudientePadreTableClass.php
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+
+matricula_create:
+  url:    /matricula/crear
+  param:  { module: matricula, action: create, format: html }
+  load:
+    - model/base/matriculaBaseTableClass.php
+    - model/matriculaTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/ciudadBaseTableClass.php
+    - model/ciudadTableClass.php
+    - model/base/acudienteMadreBaseTableClass.php
+    - model/acudienteMadreTableClass.php
+    - model/base/acudientePadreBaseTableClass.php
+    - model/acudientePadreTableClass.php
+    - model/base/usuarioBaseTableClass.php
+    - model/usuarioTableClass.php
+#    
+#estudiante_edit:
+#  url:    /estudiante/editar
+#  param:  { module: estudiante, action: edit, format: html }
+#  load:
+#    - model/base/estudianteBaseTableClass.php
+#    - model/estudianteTableClass.php
+#    - hooks/logHookClass.php
+#    - model/base/bitacoraBaseTableClass.php
+#    - model/bitacoraTableClass.php
+#    - model/base/ciudadBaseTableClass.php
+#    - model/ciudadTableClass.php
+#    - model/base/acudienteBaseTableClass.php
+#    - model/acudienteTableClass.php
+#    - model/base/tipoIdBaseTableClass.php
+#    - model/tipoIdTableClass.php
+#    - model/base/tipoRhBaseTableClass.php
+#    - model/tipoRhTableClass.php
+#    - model/base/tipoDiscapacidadBaseTableClass.php
+#    - model/tipoDiscapacidadTableClass.php
+#
+#estudiante_update:
+#  url:    /estudiante/actualizar
+#  param:  { module: estudiante, action: update, format: html }
+#  load:
+#    - model/base/estudianteBaseTableClass.php
+#    - model/estudianteTableClass.php
+#    - hooks/logHookClass.php
+#    - model/base/bitacoraBaseTableClass.php
+#    - model/bitacoraTableClass.php
+#    - model/base/ciudadBaseTableClass.php
+#    - model/ciudadTableClass.php
+#    - model/base/acudienteBaseTableClass.php
+#    - model/acudienteTableClass.php
+#    - model/base/tipoIdBaseTableClass.php
+#    - model/tipoIdTableClass.php
+#    - model/base/tipoRhBaseTableClass.php
+#    - model/tipoRhTableClass.php
+#    - model/base/tipoDiscapacidadBaseTableClass.php
+#    - model/tipoDiscapacidadTableClass.php
+#    
+#estudiante_delete:
+#  url:    /estudiante/eliminar
+#  param:  { module: estudiante, action: delete, format: json }
+#  load:
+#    - model/base/estudianteBaseTableClass.php
+#    - model/estudianteTableClass.php
+#    - hooks/logHookClass.php
+#    - model/base/bitacoraBaseTableClass.php
+#    - model/bitacoraTableClass.php
+#    - model/base/ciudadBaseTableClass.php
+#    - model/ciudadTableClass.php
+#    - model/base/acudienteBaseTableClass.php
+#    - model/acudienteTableClass.php
+#    - model/base/tipoIdBaseTableClass.php
+#    - model/tipoIdTableClass.php
+#    - model/base/tipoRhBaseTableClass.php
+#    - model/tipoRhTableClass.php
+#    - model/base/tipoDiscapacidadBaseTableClass.php
+#    - model/tipoDiscapacidadTableClass.php
+#
+#estudiante_deleteSelect:
+#  url:    /estudiante/eliminarSeleccion
+#  param:  { module: estudiante, action: deleteSelect, format: html }
+#  load:
+#    - model/base/estudianteBaseTableClass.php
+#    - model/estudianteTableClass.php
+#    - hooks/logHookClass.php
+#    - model/base/bitacoraBaseTableClass.php
+#    - model/bitacoraTableClass.php
+#    - model/base/ciudadBaseTableClass.php
+#    - model/ciudadTableClass.php
+#    - model/base/acudienteBaseTableClass.php
+#    - model/acudienteTableClass.php
+#    - model/base/tipoIdBaseTableClass.php
+#    - model/tipoIdTableClass.php
+#    - model/base/tipoRhBaseTableClass.php
+#    - model/tipoRhTableClass.php
+#    - model/base/tipoDiscapacidadBaseTableClass.php
+#    - model/tipoDiscapacidadTableClass.php
+
+
+##-------------------------- BARRIO --------------------------##
+
+barrio_index:
+  url:    /barrio/index
+  param:  { module: barrio, action: index, format: html }
+  load:
+    - model/base/barrioBaseTableClass.php
+    - model/barrioTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/ciudadBaseTableClass.php
+    - model/ciudadTableClass.php
+  
+    
+barrio_insert:
+  url:    /barrio/insertar
+  param:  { module: barrio, action: insert, format: html }
+  load:
+    - model/base/barrioBaseTableClass.php
+    - model/barrioTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/ciudadBaseTableClass.php
+    - model/ciudadTableClass.php
+
+barrio_create:
+  url:    /barrio/crear
+  param:  { module: barrio, action: create, format: html }
+  load:
+    - model/base/barrioBaseTableClass.php
+    - model/barrioTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/ciudadBaseTableClass.php
+    - model/ciudadTableClass.php
+    
+barrio_edit:
+  url:    /barrio/editar
+  param:  { module: barrio, action: edit, format: html }
+  load:
+    - model/base/barrioBaseTableClass.php
+    - model/barrioTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/ciudadBaseTableClass.php
+    - model/ciudadTableClass.php
+
+barrio_update:
+  url:    /barrio/actualizar
+  param:  { module: barrio, action: update, format: html }
+  load:
+    - model/base/barrioBaseTableClass.php
+    - model/barrioTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/ciudadBaseTableClass.php
+    - model/ciudadTableClass.php
+    
+barrio_delete:
+  url:    /barrio/eliminar
+  param:  { module: barrio, action: delete, format: json }
+  load:
+    - model/base/barrioBaseTableClass.php
+    - model/barrioTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/ciudadBaseTableClass.php
+    - model/ciudadTableClass.php
+
+barrio_deleteSelect:
+  url:    /barrio/eliminarSeleccion
+  param:  { module: barrio, action: deleteSelect, format: html }
+  load:
+    - model/base/barrioBaseTableClass.php
+    - model/barrioTableClass.php
+    - hooks/logHookClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/bitacoraBaseTableClass.php
+    - model/bitacoraTableClass.php
+    - model/base/ciudadBaseTableClass.php
+    - model/ciudadTableClass.php
